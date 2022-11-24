@@ -68,7 +68,7 @@ end
 if HTML
   # https://medium.com/@pppped/how-to-code-a-responsive-circular-percentage-chart-with-svg-and-css-3632f8cd7705
   circle = -> percents {
-    text = percents == 100.0 ? "100" : "%.2f" % percents
+    text = percents == 100.0 ? "100" : "%.1f" % percents
     <<-SVG
     <svg viewBox="0 0 36 36" class="circular-chart">
       <path class="circle-bg"
