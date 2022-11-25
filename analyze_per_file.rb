@@ -101,11 +101,11 @@ if HTML
 
   <h1 class="post-title">Passing Specs per Ruby Implementation</h1>
   <p>
-    This page shows the number of passing specs per Ruby implementation.
+    This page shows the number of passing <a href="https://github.com/ruby/spec">ruby/spec</a> specs per Ruby implementation.
     This page is updated daily and automatically with GitHub Actions on <a href="https://github.com/eregon/rubyspec-stats">this repository</a>.
   </p>
   <p>
-    Specs excluded by a Ruby implementation (via tags) are not run, as those may crash the interpreter, and also they are not run in that implementation's CI.
+    Specs excluded by a Ruby implementation (via tags) are not run, as those may cause a fatal error and abort the process, and also they are not run in that implementation's CI.
     Specs are run on a Ruby implementation with no extra options, i.e., with the default behavior a user would see.
     More details are available in this related <a href="https://eregon.me/blog/2020/06/27/ruby-spec-compatibility-report.html">blog post</a>.
   </p>
