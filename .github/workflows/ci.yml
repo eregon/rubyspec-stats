@@ -11,6 +11,7 @@ permissions:
 
 jobs:
   specs:
+    if: false # uncomment this to only deploy
     permissions:
       contents: write
     strategy:
@@ -92,7 +93,7 @@ jobs:
         git push
 
   html:
-    needs: [specs]
+    # needs: [specs] # comment this out to only deploy
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
