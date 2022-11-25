@@ -107,7 +107,11 @@ if HTML
   <p>
     Specs excluded by a Ruby implementation (via tags) are not run, as those may crash the interpreter, and also they are not run in that implementation's CI.
     Specs are run on a Ruby implementation with no extra options, i.e., with the default behavior a user would see.
-    More details are available in this <a href="https://eregon.me/blog/2020/06/27/ruby-spec-compatibility-report.html">blog post</a>.
+    More details are available in this related <a href="https://eregon.me/blog/2020/06/27/ruby-spec-compatibility-report.html">blog post</a>.
+  </p>
+  <p>
+    More Ruby implementations are welcome via PRs.
+    See <a href="https://github.com/eregon/rubyspec-stats/blob/master/.github/workflows/ci.yml">this workflow</a> for how it works.
   </p>
 
   <table style="width: 100%">
