@@ -1,14 +1,9 @@
 ---
 exceptions:
-- "Class#subclasses returns a list of classes directly inheriting from self ERROR\nNoMethodError: undefined method `subclasses' for ModuleSpecs::Parent:Class\nDid you mean?  superclass\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/core/class/subclasses_spec.rb:57:in `assert_subclasses'\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/core/class/subclasses_spec.rb:7:in `block (3 levels) in <top (required)>'\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/core/class/subclasses_spec.rb:5:in `block in <top (required)>'\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/core/class/subclasses_spec.rb:4:in `<top (required)>'"
-- "Class#subclasses does not return included modules ERROR\nNoMethodError: undefined method `subclasses' for #<Class:0x28888>\nDid you mean?  superclass\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/core/class/subclasses_spec.rb:57:in `assert_subclasses'\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/core/class/subclasses_spec.rb:16:in `block (3 levels) in <top (required)>'\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/core/class/subclasses_spec.rb:5:in `block in <top (required)>'\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/core/class/subclasses_spec.rb:4:in `<top (required)>'"
-- "Class#subclasses does not return singleton classes ERROR\nNoMethodError: undefined method `subclasses' for #<Class:0x288a8>\nDid you mean?  superclass\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/core/class/subclasses_spec.rb:27:in `block (3 levels) in <top (required)>'\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/core/class/subclasses_spec.rb:5:in `block in <top (required)>'\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/core/class/subclasses_spec.rb:4:in `<top (required)>'"
-- "Class#subclasses has 1 entry per module or class ERROR\nNoMethodError: undefined method `subclasses' for ModuleSpecs::Parent:Class\nDid you mean?  superclass\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/core/class/subclasses_spec.rb:31:in `block (3 levels) in <top (required)>'\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/core/class/subclasses_spec.rb:5:in `block in <top (required)>'\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/core/class/subclasses_spec.rb:4:in `<top (required)>'"
-- "Class#subclasses works when creating subclasses concurrently ERROR\nNoMethodError: undefined method `subclasses' for #<Class:0x288c8>\nDid you mean?  superclass\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/core/class/subclasses_spec.rb:52:in `block (3 levels) in <top (required)>'\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/core/class/subclasses_spec.rb:5:in `block in <top (required)>'\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/core/class/subclasses_spec.rb:4:in `<top (required)>'"
-time: 81.732074
+time: 110.25565
 files: 1959
 examples: 21696
-expectations: 113951
+expectations: 350818
 failures: 0
-errors: 5
+errors: 0
 tagged: 628
