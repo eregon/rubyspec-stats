@@ -1,10 +1,9 @@
 ---
 exceptions:
-- "The super keyword should pass method arguments when called within a closure ERROR\nArgumentError: missing keyword: arg\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/language/fixtures/super.rb:561:in `m'\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/language/fixtures/super.rb:568:in `block in m'\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/language/fixtures/super.rb:568:in `m'\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/language/super_spec.rb:326:in `block in <main>'\norg/jruby/RubyBasicObject.java:2593:in `instance_exec'\norg/jruby/RubyArray.java:4919:in `all?'\norg/jruby/RubyArray.java:1988:in `each'\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/language/super_spec.rb:4:in `<main>'\norg/jruby/RubyKernel.java:1091:in `load'\norg/jruby/RubyBasicObject.java:2593:in `instance_exec'\norg/jruby/RubyArray.java:1988:in `each'"
-time: 109.20132799999999
+time: 106.73538
 files: 78
 examples: 2631
-expectations: 4771
+expectations: 4772
 failures: 0
-errors: 1
+errors: 0
 tagged: 52
