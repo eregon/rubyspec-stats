@@ -1,9 +1,10 @@
 ---
 exceptions:
-time: 105.905612
+- "IO#write on a file writes binary data if no encoding is given and multiple arguments passed ERROR\nEncoding::CompatibilityError: incompatible character encodings: ASCII-8BIT and UTF-8\n<internal:core> core/array.rb:691:in `<<'\n<internal:core> core/array.rb:691:in `block in join'\n<internal:core> core/truffle/thread_operations.rb:75:in `detect_recursion'\n<internal:core> core/array.rb:657:in `join'\n<internal:core> core/io.rb:2315:in `write'\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/core/io/write_spec.rb:111:in `block (3 levels) in <top (required)>'\n<internal:core> core/io.rb:664:in `open'\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/core/io/write_spec.rb:110:in `block (2 levels) in <top (required)>'\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/core/io/write_spec.rb:7:in `<top (required)>'"
+time: 111.464161
 files: 1965
-examples: 21827
-expectations: 359025
+examples: 21832
+expectations: 267540
 failures: 0
-errors: 0
+errors: 1
 tagged: 623
