@@ -31,13 +31,19 @@ jobs:
       with:
         ruby-version: ${{ matrix.ruby }}
 
-    - uses: actions/checkout@v3
+    - if: matrix.name != 'ruby'
+      id: ruby_revision
+      run: echo "sha=$(ruby -e 'puts RUBY_REVISION')" >> $GITHUB_OUTPUT
+    - if: matrix.name != 'ruby'
+      uses: actions/checkout@v3
       with:
         repository: ${{ matrix.repo }}
-        fetch-depth: 0
+        ref: ${{ steps.ruby_revision.outputs.sha }}
 
-    - if: matrix.name != 'ruby'
-      run: git checkout "$(ruby -e 'puts RUBY_REVISION')"
+    - if: matrix.name == 'ruby'
+      uses: actions/checkout@v3
+      with:
+        repository: ${{ matrix.repo }}
 
     - name: Remove file on CRuby to test the ruby in PATH
       run: rm spec/default.mspec
