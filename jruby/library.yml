@@ -1,10 +1,9 @@
 ---
 exceptions:
-- "Zlib::GzipReader#mtime returns the timestamp from the Gzip header FAILED\nExpected 1979-02-10 00:20:20 +0000 == 287454020\nto be truthy but was false\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/library/zlib/gzipreader/mtime_spec.rb:9:in `block in <main>'\norg/jruby/RubyBasicObject.java:2610:in `instance_exec'\norg/jruby/RubyArray.java:4920:in `all?'\norg/jruby/RubyArray.java:1989:in `each'\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/library/zlib/gzipreader/mtime_spec.rb:5:in `<main>'\norg/jruby/RubyKernel.java:1105:in `load'\norg/jruby/RubyBasicObject.java:2610:in `instance_exec'\norg/jruby/RubyArray.java:1989:in `each'"
-time: 78.686504
-files: 1708
-examples: 5616
-expectations: 20072
-failures: 1
+time: 102.51748099999999
+files: 1711
+examples: 5619
+expectations: 20075
+failures: 0
 errors: 0
 tagged: 840
