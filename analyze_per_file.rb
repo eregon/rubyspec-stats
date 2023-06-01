@@ -139,6 +139,15 @@ if HTML
   }
 
   puts "<tbody>"
+  puts '<tr>'
+  puts '<td>RUBY_VERSION</td>'
+  processed.each_key do |ruby|
+    ruby_version_file = "#{ruby}/RUBY_VERSION"
+    ruby_version = File.exist?(ruby_version_file) ? File.read(ruby_version_file) : '?'
+    puts %Q{<td style="text-align: center">#{ruby_version}</th>}
+  end
+  puts '</tr>'
+
   groups.each do |group|
     case group
     when 'total'

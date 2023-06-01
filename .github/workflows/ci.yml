@@ -51,6 +51,9 @@ jobs:
 
     - run: mkdir ${{ matrix.name }}
 
+    - name: Save RUBY_VERSION
+      run: ruby -e 'puts RUBY_VERSION' > ${{ matrix.name }}/RUBY_VERSION
+
     - name: language specs
       run: $MSPEC spec/ruby/language
       continue-on-error: true
