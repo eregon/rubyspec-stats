@@ -1,6 +1,6 @@
 require 'yaml'
 
-KINDS = [:examples, :errors, :failures, :tagged]
+KINDS = [:examples, :errors, :failures, :tagged, :time]
 
 DETAILS = ARGV.delete('--details')
 USE_MRI_TOTALS = ARGV.delete('--mri-totals')
@@ -107,6 +107,7 @@ if HTML
   <p>
     Specs excluded by a Ruby implementation (via tags) are not run, as those may cause a fatal error and abort the process, and also they are not run in that implementation's CI.
     Specs are run on a Ruby implementation with no extra options, i.e., with the default behavior a user would see.
+    The only exception is using <code>--dev</code> on JRuby so it runs specs slightly faster.
     More details are available in this related <a href="https://eregon.me/blog/2020/06/27/ruby-spec-compatibility-report.html">blog post</a>.
   </p>
   <p>
@@ -169,7 +170,9 @@ if HTML
       ratio = totals[:passing].to_f / totals[:examples]
       puts '<td style="text-align: center">'
       puts circle[ratio * 100]
-      puts %Q{<span style="font-size: 95%">#{totals[:passing]} passing</span>} if group.start_with?('total')
+      if group.start_with?('total')
+        puts %Q{<span style="font-size: 95%">#{totals[:passing]} passing<br/>in #{totals[:time].to_i.divmod(60).join('min ')}s</span>}
+      end
       puts "</td>"
     end
     puts "</tr>"
