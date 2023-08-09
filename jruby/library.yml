@@ -1,10 +1,10 @@
 ---
 exceptions:
 - "An exception occurred during: stringio_each_separator ERROR\nNameError: uninitialized constant StringIO::VERSION\nDid you mean?  Person\norg/jruby/RubyModule.java:4332:in `const_missing'\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/library/stringio/shared/each.rb:39:in `block in <main>'\norg/jruby/RubyBasicObject.java:2613:in `instance_exec'\norg/jruby/RubyArray.java:4920:in `all?'\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/library/stringio/shared/each.rb:1:in `<main>'\norg/jruby/RubyKernel.java:1071:in `require'\norg/jruby/RubyKernel.java:1098:in `require_relative'\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/library/stringio/each_line_spec.rb:3:in `<main>'\norg/jruby/RubyKernel.java:1105:in `load'\norg/jruby/RubyBasicObject.java:2613:in `instance_exec'\norg/jruby/RubyArray.java:1989:in `each'"
-time: 81.323405
+time: 103.26850900000001
 files: 1554
 examples: 5619
-expectations: 20074
+expectations: 20069
 failures: 0
 errors: 1
 tagged: 840
