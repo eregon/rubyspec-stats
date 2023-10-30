@@ -18,7 +18,7 @@ jobs:
       fail-fast: false
       matrix:
         include:
-        - { name: ruby, ruby: ruby-3.1, repo: ruby/ruby }
+        - { name: ruby, ruby: ruby-3.2, repo: ruby/ruby }
         - { name: jruby, ruby: jruby-head, repo: jruby/jruby }
         - { name: truffleruby, ruby: truffleruby-head, repo: oracle/truffleruby }
     runs-on: ubuntu-latest
@@ -114,7 +114,7 @@ jobs:
         ref: master
     - uses: ruby/setup-ruby@v1
       with:
-        ruby-version: 3.1
+        ruby-version: 3.2
 
     - run: mkdir site
     - run: ruby analyze_per_file.rb --mri-totals --html ruby/*.yml truffleruby/*.yml jruby/*.yml > site/index.html

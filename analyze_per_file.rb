@@ -130,7 +130,13 @@ if HTML
   processed.each_key do |ruby|
     # ruby_name = ruby.sub(/-/, ' ').sub(/^ruby/, 'cruby').capitalize.sub('ruby', 'Ruby')
     ruby_name = ruby.sub(/-/, ' ').sub(/^ruby/, 'cruby').split.first.capitalize.sub('ruby', 'Ruby')
-    ruby_name = "#{ruby_name} #{(ruby_name == 'CRuby') ? '3.1' : 'dev'}"
+    if ruby_name == 'CRuby'
+      ruby_version_file = "#{ruby}/RUBY_VERSION"
+      major_minor = File.read(ruby_version_file)[/^\d+\.\d+/]
+      ruby_name = "CRuby #{major_minor}"
+    else
+      ruby_name = "#{ruby_name} dev"
+    end
     puts %Q{<th style="text-align: center">#{ruby_name}</th>}
   end
   puts "</thead>"
