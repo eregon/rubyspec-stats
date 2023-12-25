@@ -1,9 +1,10 @@
 ---
 exceptions:
-time: 117.136376
+- "Ruby String literals with a magic frozen comment produce the same object each time FAILED\nExpected \"false\" == \"true\"\nto be truthy but was false\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/language/string_spec.rb:223:in `block in <main>'\norg/jruby/RubyBasicObject.java:2620:in `instance_exec'\norg/jruby/RubyArray.java:4926:in `all?'\norg/jruby/RubyArray.java:1989:in `each'\norg/jruby/RubyArray.java:1989:in `each'\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/language/string_spec.rb:203:in `<main>'\norg/jruby/RubyKernel.java:1107:in `load'\norg/jruby/RubyBasicObject.java:2620:in `instance_exec'\norg/jruby/RubyArray.java:1989:in `each'"
+time: 106.90194
 files: 78
 examples: 2673
 expectations: 4885
-failures: 0
+failures: 1
 errors: 0
 tagged: 43
