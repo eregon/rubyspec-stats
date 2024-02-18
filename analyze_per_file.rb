@@ -191,7 +191,7 @@ if HTML
         puts %Q{<span style="font-size: 95%">#{totals[:passing]} passing<br/>in #{totals[:time].to_i.divmod(60).join('min ')}s</span>}
       else
         unless same_number_of_specs[group]
-          puts %Q{<span style="font-size: 95%">#{totals[:passing]} / #{totals[:examples]} specs</span>}
+          puts %Q{<span style="font-size: 95%">of #{totals[:examples]} specs</span>}
         end
       end
       puts "</td>"
