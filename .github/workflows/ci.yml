@@ -117,7 +117,7 @@ jobs:
         ruby-version: 3.2
 
     - run: mkdir site
-    - run: ruby analyze_per_file.rb --mri-totals --html ruby/*.yml truffleruby/*.yml jruby/*.yml > site/index.html
+    - run: ruby analyze_per_file.rb --html ruby/*.yml truffleruby/*.yml jruby/*.yml > site/index.html
 
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v1

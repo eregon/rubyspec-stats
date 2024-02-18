@@ -53,6 +53,14 @@ if USE_MRI_TOTALS
   end
 end
 
+examples_per_group = Hash.new { |h,k| h[k] = [] }
+processed.each_pair do |ruby, summary|
+  summary.each_pair do |group, totals|
+    examples_per_group[group] << totals[:examples]
+  end
+end
+same_number_of_specs = examples_per_group.to_h { |group, examples| [group, examples.uniq.size == 1] }
+
 # Compute totals
 processed.each_pair do |ruby, summary|
   summary["total"] = KINDS.map { |kind| [kind, summary.sum { |_, totals| totals[kind] }] }.to_h
@@ -169,8 +177,11 @@ if HTML
       # group_name += " specs"
     end
     puts group.start_with?('total') ? '<tr style="border-top: 2px solid black">' : '<tr>'
-    puts "<td>#{group_name}<br/>\n
-          #{mri_summary[group][:examples]} specs</td>"
+    if same_number_of_specs[group]
+      puts "<td>#{group_name}<br/>\n#{mri_summary[group][:examples]} specs</td>"
+    else
+      puts "<td>#{group_name}</td>"
+    end
     processed.each_pair do |ruby, summary|
       totals = summary[group]
       ratio = totals[:passing].to_f / totals[:examples]
@@ -178,6 +189,10 @@ if HTML
       puts circle[ratio * 100]
       if group.start_with?('total')
         puts %Q{<span style="font-size: 95%">#{totals[:passing]} passing<br/>in #{totals[:time].to_i.divmod(60).join('min ')}s</span>}
+      else
+        unless same_number_of_specs[group]
+          puts %Q{<span style="font-size: 95%">#{totals[:passing]} / #{totals[:examples]} specs</span>}
+        end
       end
       puts "</td>"
     end
