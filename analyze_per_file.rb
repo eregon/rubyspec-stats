@@ -172,6 +172,7 @@ if HTML
     else
       group_name = group.gsub('_', '-').capitalize
       group_name = group_name.sub('Capi', 'C-API').sub('Library', 'Standard Library').sub('Core', 'Core Library')
+      next unless group_name == "C-API"
       link = group == 'capi' ? 'optional/capi' : group
       group_name = %Q{<a href="https://github.com/ruby/spec/tree/master/#{link}">#{group_name}</a>}
       # group_name += " specs"
