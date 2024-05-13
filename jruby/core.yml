@@ -38,10 +38,10 @@ exceptions:
 - "TracePoint.new converts given event name as string into symbol using to_sym FAILED\nExpected nil == :line\nto be truthy but was false\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/core/tracepoint/new_spec.rb:36:in `block in <main>'\norg/jruby/ext/tracepoint/TracePoint.java:156:in `enable'\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/core/tracepoint/new_spec.rb:31:in `block in <main>'\norg/jruby/RubyBasicObject.java:2620:in `instance_exec'\norg/jruby/RubyArray.java:4910:in `all?'\norg/jruby/RubyArray.java:1981:in `each'\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/core/tracepoint/new_spec.rb:4:in `<main>'\norg/jruby/RubyKernel.java:1220:in `load'\norg/jruby/RubyBasicObject.java:2620:in `instance_exec'\norg/jruby/RubyArray.java:1981:in `each'"
 - "TracePoint#path returns the path of the file being run FAILED\nExpected nil == \"/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/core/tracepoint/path_spec.rb\"\nto be truthy but was false\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/core/tracepoint/path_spec.rb:13:in `block in <main>'\norg/jruby/RubyBasicObject.java:2620:in `instance_exec'\norg/jruby/RubyArray.java:4910:in `all?'\norg/jruby/RubyArray.java:1981:in `each'\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/core/tracepoint/path_spec.rb:4:in `<main>'\norg/jruby/RubyKernel.java:1220:in `load'\norg/jruby/RubyBasicObject.java:2620:in `instance_exec'\norg/jruby/RubyArray.java:1981:in `each'"
 - "TracePoint#self return the trace object from event FAILED\nExpected false to be true\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/core/tracepoint/self_spec.rb:11:in `block in <main>'\norg/jruby/ext/tracepoint/TracePoint.java:156:in `enable'\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/core/tracepoint/self_spec.rb:7:in `block in <main>'\norg/jruby/RubyBasicObject.java:2620:in `instance_exec'\norg/jruby/RubyArray.java:4910:in `all?'\norg/jruby/RubyArray.java:1981:in `each'\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/core/tracepoint/self_spec.rb:4:in `<main>'\norg/jruby/RubyKernel.java:1220:in `load'\norg/jruby/RubyBasicObject.java:2620:in `instance_exec'\norg/jruby/RubyArray.java:1981:in `each'"
-time: 369.536003
+time: 382.96221099999997
 files: 2002
 examples: 22354
-expectations: 106992
+expectations: 107016
 failures: 12
 errors: 26
 tagged: 550
