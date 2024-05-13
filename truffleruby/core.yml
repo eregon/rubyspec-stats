@@ -1,7 +1,7 @@
 ---
 exceptions:
 - "Process.spawn closes STDERR in the child if :err => :close FAILED\nExpected (905240): \"out\\nrescued\\n\"\n          but got: \"out\\n\"\nBacktrace\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/core/process/spawn_spec.rb:572:in `block (4 levels) in <top (required)>'\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/core/process/spawn_spec.rb:571:in `block (3 levels) in <top (required)>'\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/core/process/spawn_spec.rb:32:in `<top (required)>'"
-time: 120.020787
+time: 114.123562
 files: 2002
 examples: 22730
 expectations: 107791
