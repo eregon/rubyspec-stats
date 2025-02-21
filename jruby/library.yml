@@ -1,9 +1,12 @@
 ---
 exceptions:
-time: 89.969099
+- "StringIO#read_nonblock when passed length, buffer preserves the encoding of the given buffer FAILED\nExpected #<Encoding:ASCII-8BIT> == #<Encoding:ISO-8859-1>\nto be truthy but was false\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/library/stringio/shared/read.rb:32:in `block in <main>'\norg/jruby/RubyBasicObject.java:2653:in `instance_exec'\norg/jruby/RubyArray.java:4938:in `all?'\norg/jruby/RubyArray.java:2009:in `each'\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/library/stringio/read_nonblock_spec.rb:6:in `<main>'\norg/jruby/RubyKernel.java:1223:in `load'\norg/jruby/RubyBasicObject.java:2653:in `instance_exec'\norg/jruby/RubyArray.java:2009:in `each'"
+- "StringIO#read when passed length, buffer preserves the encoding of the given buffer FAILED\nExpected #<Encoding:ASCII-8BIT> == #<Encoding:ISO-8859-1>\nto be truthy but was false\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/library/stringio/shared/read.rb:32:in `block in <main>'\norg/jruby/RubyBasicObject.java:2653:in `instance_exec'\norg/jruby/RubyArray.java:4938:in `all?'\norg/jruby/RubyArray.java:2009:in `each'\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/library/stringio/read_spec.rb:5:in `<main>'\norg/jruby/RubyKernel.java:1223:in `load'\norg/jruby/RubyBasicObject.java:2653:in `instance_exec'\norg/jruby/RubyArray.java:2009:in `each'"
+- "StringIO#sysread when passed length, buffer preserves the encoding of the given buffer FAILED\nExpected #<Encoding:ASCII-8BIT> == #<Encoding:ISO-8859-1>\nto be truthy but was false\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/library/stringio/shared/read.rb:32:in `block in <main>'\norg/jruby/RubyBasicObject.java:2653:in `instance_exec'\norg/jruby/RubyArray.java:4938:in `all?'\norg/jruby/RubyArray.java:2009:in `each'\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/library/stringio/sysread_spec.rb:6:in `<main>'\norg/jruby/RubyKernel.java:1223:in `load'\norg/jruby/RubyBasicObject.java:2653:in `instance_exec'\norg/jruby/RubyArray.java:2009:in `each'"
+time: 89.41364300000001
 files: 1574
 examples: 6791
 expectations: 23972
-failures: 0
+failures: 3
 errors: 0
 tagged: 688
