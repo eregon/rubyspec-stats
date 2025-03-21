@@ -1,7 +1,7 @@
 ---
 exceptions:
 - "The module keyword does not reopen a module included in Object FAILED\nExpected ModuleSpecs::IncludedInObject::IncludedModuleSpecs == ModuleSpecs::IncludedInObject::IncludedModuleSpecs\nto be falsy but was true\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/language/module_spec.rb:34:in 'block in <main>'\norg/jruby/RubyBasicObject.java:2672:in 'instance_exec'\norg/jruby/RubyArray.java:4881:in 'all?'\norg/jruby/RubyArray.java:2077:in 'each'\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/language/module_spec.rb:4:in '<main>'\norg/jruby/RubyKernel.java:1213:in 'load'\norg/jruby/RubyBasicObject.java:2672:in 'instance_exec'\norg/jruby/RubyArray.java:2077:in 'each'"
-time: 122.163367
+time: 114.368354
 files: 79
 examples: 2813
 expectations: 5148
