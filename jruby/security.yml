@@ -1,10 +1,9 @@
 ---
 exceptions:
-- "CVE-2024-49761 is resisted by the Regexp implementation handling that regular expression in linear time FAILED\nExpected false == true\nto be truthy but was false\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/security/cve_2024_49761_spec.rb:6:in 'block in <main>'\norg/jruby/RubyBasicObject.java:2672:in 'instance_exec'\norg/jruby/RubyArray.java:4881:in 'all?'\norg/jruby/RubyArray.java:2077:in 'each'\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/security/cve_2024_49761_spec.rb:4:in 'block in <main>'\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/security/cve_2024_49761_spec.rb:3:in '<main>'\norg/jruby/RubyKernel.java:1213:in 'load'\norg/jruby/RubyBasicObject.java:2672:in 'instance_exec'\norg/jruby/RubyArray.java:2077:in 'each'"
-time: 15.552446999999999
+time: 14.942893999999999
 files: 14
 examples: 36
-expectations: 45
-failures: 1
+expectations: 44
+failures: 0
 errors: 0
-tagged: 0
+tagged: 1
