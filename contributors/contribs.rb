@@ -42,6 +42,7 @@ mapping = contributors.map { |author,commits| author }.to_h { |author|
   end
 }
 pp mapping
+File.write 'mapping.yml', YAML.dump(mapping)
 
 total_commits = contributors.values.sum
 puts "#{total_commits} commits from the top #{contributors.size} contributors"
