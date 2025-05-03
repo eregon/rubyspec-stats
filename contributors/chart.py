@@ -33,10 +33,14 @@ for y, contribs in per_year_per_impl.items():
 print(year)
 print(data)
 
-fig, ax = plt.subplots()
+dpi = 96
+width_px = 800
+height_px = 450
+
+fig, ax = plt.subplots(figsize=(width_px / dpi, height_px / dpi), dpi=dpi)
 ax.stackplot(year, data.values(), labels=data.keys(), alpha=0.8)
 ax.legend(loc='center right', reverse=True)
-ax.set_title('Contributions to ruby/spec by group')
+ax.set_title('Contributions to ruby/spec')
 ax.set_xlabel('Year')
 ax.set_ylabel('Proportion of all commits that year')
 
@@ -44,4 +48,12 @@ ax.set_xlim(min(year), max(year))
 ax.set_ylim(0, 1)
 ax.xaxis.set_major_locator(mticker.MultipleLocator(1))
 
-plt.show()
+# plt.show()
+
+ax.xaxis.set_tick_params(labelsize=9)
+
+fig.tight_layout()
+# fig.subplots_adjust(top=0.95, bottom=0.1, left=0.07, right=0.97)
+# fig.subplots_adjust(top=1, bottom=0, left=0, right=1)
+
+plt.savefig('chart.png', dpi=dpi, transparent=not True)
