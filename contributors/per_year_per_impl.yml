@@ -1,0 +1,127 @@
+---
+2008:
+  :cruby: 103
+  :rubinius: 851
+  :jruby: 120
+  :truffleruby: 0
+  :natalie: 0
+  :external: 93
+2009:
+  :cruby: 167
+  :rubinius: 64
+  :jruby: 158
+  :truffleruby: 0
+  :natalie: 0
+  :external: 1311
+2010:
+  :cruby: 272
+  :rubinius: 47
+  :jruby: 145
+  :truffleruby: 0
+  :natalie: 0
+  :external: 29
+2011:
+  :cruby: 108
+  :rubinius: 355
+  :jruby: 110
+  :truffleruby: 0
+  :natalie: 0
+  :external: 0
+2012:
+  :cruby: 138
+  :rubinius: 496
+  :jruby: 51
+  :truffleruby: 0
+  :natalie: 0
+  :external: 12
+2013:
+  :cruby: 169
+  :rubinius: 629
+  :jruby: 11
+  :truffleruby: 0
+  :natalie: 0
+  :external: 7
+2014:
+  :cruby: 98
+  :rubinius: 252
+  :jruby: 1
+  :truffleruby: 12
+  :natalie: 0
+  :external: 6
+2015:
+  :cruby: 119
+  :rubinius: 125
+  :jruby: 33
+  :truffleruby: 567
+  :natalie: 0
+  :external: 98
+2016:
+  :cruby: 71
+  :rubinius: 67
+  :jruby: 56
+  :truffleruby: 544
+  :natalie: 0
+  :external: 168
+2017:
+  :cruby: 144
+  :rubinius: 21
+  :jruby: 26
+  :truffleruby: 714
+  :natalie: 0
+  :external: 86
+2018:
+  :cruby: 148
+  :rubinius: 0
+  :jruby: 17
+  :truffleruby: 529
+  :natalie: 0
+  :external: 4
+2019:
+  :cruby: 238
+  :rubinius: 12
+  :jruby: 13
+  :truffleruby: 584
+  :natalie: 0
+  :external: 18
+2020:
+  :cruby: 163
+  :rubinius: 0
+  :jruby: 13
+  :truffleruby: 515
+  :natalie: 0
+  :external: 43
+2021:
+  :cruby: 103
+  :rubinius: 1
+  :jruby: 12
+  :truffleruby: 307
+  :natalie: 0
+  :external: 39
+2022:
+  :cruby: 91
+  :rubinius: 0
+  :jruby: 7
+  :truffleruby: 341
+  :natalie: 7
+  :external: 32
+2023:
+  :cruby: 96
+  :rubinius: 0
+  :jruby: 16
+  :truffleruby: 345
+  :natalie: 134
+  :external: 7
+2024:
+  :cruby: 123
+  :rubinius: 0
+  :jruby: 20
+  :truffleruby: 225
+  :natalie: 90
+  :external: 0
+2025:
+  :cruby: 22
+  :rubinius: 0
+  :jruby: 3
+  :truffleruby: 71
+  :natalie: 26
+  :external: 0
