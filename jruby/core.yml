@@ -1,10 +1,10 @@
 ---
 exceptions:
 - "An exception occurred during: loading /home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/core/data/initialize_spec.rb ERROR\nSyntaxError: /home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/core/data/initialize_spec.rb:73: syntax error, unexpected end-of-file\n\norg/jruby/RubyKernel.java:1212:in 'load'\norg/jruby/RubyBasicObject.java:2765:in 'instance_exec'\norg/jruby/RubyArray.java:2079:in 'each'"
-time: 410.393019
+time: 432.238814
 files: 2079
 examples: 23902
-expectations: 110492
+expectations: 110506
 failures: 0
 errors: 1
 tagged: 743
