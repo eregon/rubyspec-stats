@@ -1,10 +1,9 @@
 ---
 exceptions:
-- "Process.exec sets the current directory when given the :chdir option FAILED\nExpected \n\"[0.078s][warning][os,thread] Failed to start thread \\\"GC Thread#1\\\" - pthread_create failed (EAGAIN) for attributes: stacksize: 1024k, guardsize: 4k, detached.\n[0.078s][error  ][gc,task  ] GC(0) Failed to create worker thread\n/home/runner/work/rubyspec-stats/rubyspec-stats/rubyspec_temp/3628\n\" == \n\"/home/runner/work/rubyspec-stats/rubyspec-stats/rubyspec_temp/3628\n\"\nto be truthy but was false\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/core/process/exec_spec.rb:43:in `block (3 levels) in <top (required)>'\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/core/process/exec_spec.rb:42:in `block (2 levels) in <top (required)>'\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/core/process/exec_spec.rb:3:in `<top (required)>'"
-time: 77.961982078
+time: 72.142213373
 files: 2079
 examples: 23817
-expectations: 110739
-failures: 1
+expectations: 111204
+failures: 0
 errors: 0
 tagged: 882
