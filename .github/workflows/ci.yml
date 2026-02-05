@@ -18,7 +18,7 @@ jobs:
       fail-fast: false
       matrix:
         include:
-        - { name: ruby, ruby: ruby-3.3, repo: ruby/ruby }
+        - { name: ruby, ruby: ruby-3.4, repo: ruby/ruby }
         - { name: jruby, ruby: jruby-head, repo: jruby/jruby }
         - { name: truffleruby, ruby: truffleruby-head, repo: oracle/truffleruby }
     runs-on: ubuntu-latest
