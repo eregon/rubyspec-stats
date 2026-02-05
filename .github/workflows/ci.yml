@@ -23,7 +23,7 @@ jobs:
         - { name: truffleruby, ruby: truffleruby-head, repo: oracle/truffleruby }
     runs-on: ubuntu-latest
     env:
-      MSPEC: "spec/mspec/bin/mspec ci --timeout 60 --target ruby --marker . --format yaml --output stats.yml"
+      MSPEC: "spec/mspec/bin/mspec ci --timeout 60 --target $(which ruby) --marker . --format yaml --output stats.yml"
       JRUBY_OPTS: "--dev" # Takes 14min instead of 21min otherwise on JRuby
       # No other implementation-specific options are allowed, we should test with no options, that is with defaults, because that is what users see.
     steps:
