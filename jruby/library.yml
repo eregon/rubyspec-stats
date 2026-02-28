@@ -20,10 +20,10 @@ exceptions:
 - "An exception occurred during: loading /home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/library/syslog/options_spec.rb ERROR\nLoadError: cannot load such file -- syslog\norg/jruby/RubyKernel.java:1194:in 'require'\n/home/runner/.rubies/jruby-head/lib/ruby/stdlib/rubygems/core_ext/kernel_require.rb:139:in 'require'\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/library/syslog/options_spec.rb:4:in 'block in <main>'\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/library/syslog/options_spec.rb:3:in '<main>'\norg/jruby/RubyKernel.java:1223:in 'load'\norg/jruby/RubyBasicObject.java:2758:in 'instance_exec'\norg/jruby/RubyArrayNative.java:1739:in 'each'"
 - "An exception occurred during: loading /home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/library/syslog/reopen_spec.rb ERROR\nLoadError: cannot load such file -- syslog\norg/jruby/RubyKernel.java:1194:in 'require'\n/home/runner/.rubies/jruby-head/lib/ruby/stdlib/rubygems/core_ext/kernel_require.rb:139:in 'require'\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/library/syslog/reopen_spec.rb:5:in 'block in <main>'\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/library/syslog/reopen_spec.rb:3:in '<main>'\norg/jruby/RubyKernel.java:1223:in 'load'\norg/jruby/RubyBasicObject.java:2758:in 'instance_exec'\norg/jruby/RubyArrayNative.java:1739:in 'each'"
 - "An exception occurred during: loading /home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/library/syslog/warning_spec.rb ERROR\nLoadError: cannot load such file -- syslog\norg/jruby/RubyKernel.java:1194:in 'require'\n/home/runner/.rubies/jruby-head/lib/ruby/stdlib/rubygems/core_ext/kernel_require.rb:139:in 'require'\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/library/syslog/warning_spec.rb:5:in 'block in <main>'\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/library/syslog/warning_spec.rb:3:in '<main>'\norg/jruby/RubyKernel.java:1223:in 'load'\norg/jruby/RubyBasicObject.java:2758:in 'instance_exec'\norg/jruby/RubyArrayNative.java:1739:in 'each'"
-time: 88.881119
+time: 94.04308800000001
 files: 1518
 examples: 6698
-expectations: 22210
+expectations: 22213
 failures: 0
 errors: 20
 tagged: 674
