@@ -202,7 +202,7 @@ if HTML
   </tbody>
   </table>
   </div></main>
-  <footer><span>© 2022 Benoit Daloze.</span></footer>
+  <footer><span>© #{Time.now.year} Benoit Daloze.</span></footer>
   </body>
   HTML
 else
