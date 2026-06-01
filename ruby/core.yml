@@ -1,9 +1,9 @@
 ---
 exceptions:
-time: 32.983079785
+time: 32.221691849
 files: 2119
 examples: 24485
-expectations: 191640
+expectations: 190710
 failures: 0
 errors: 0
 tagged: 0
