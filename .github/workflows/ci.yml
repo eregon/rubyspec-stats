@@ -122,7 +122,7 @@ jobs:
     - run: ruby analyze_per_file.rb --html ruby/*.yml truffleruby/*.yml jruby/*.yml > site/index.html
 
     - name: Upload artifact
-      uses: actions/upload-pages-artifact@v3
+      uses: actions/upload-pages-artifact@v5
       with:
         path: site
 
