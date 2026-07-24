@@ -142,6 +142,8 @@ if HTML
       ruby_version_file = "#{ruby}/RUBY_VERSION"
       major_minor = File.read(ruby_version_file)[/^\d+\.\d+/]
       ruby_name = "CRuby #{major_minor}"
+    elsif ruby == 'monoruby'
+      ruby_name = 'monoruby dev'
     else
       ruby_name = "#{ruby_name} dev"
     end
