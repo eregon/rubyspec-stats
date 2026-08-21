@@ -107,8 +107,116 @@ jobs:
         git pull --rebase
         git push
 
+  monoruby:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+    - uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: "4.0"
+
+    - id: monoruby
+      uses: sisshiki1969/monoruby@master
+
+    - name: Clone ruby/spec and mspec
+      run: |
+        git clone --depth 1 https://github.com/ruby/spec.git spec/ruby
+        git clone --depth 1 https://github.com/ruby/mspec.git spec/mspec
+
+    # spec/tags is maintained in the monoruby repo so upstream doesn't need
+    # PRs for each hanging/failing spec.
+    - name: Clone monoruby for spec/tags
+      run: |
+        git clone --depth 1 https://github.com/sisshiki1969/monoruby.git monoruby-repo
+        mkdir -p spec/tags/ruby
+        [ -d monoruby-repo/spec/tags ] && cp -R monoruby-repo/spec/tags/. spec/tags/ruby/ || true
+
+    - uses: actions/checkout@v6
+      with:
+        ref: master
+        path: rubyspec-stats
+        fetch-depth: 0
+
+    - run: mkdir monoruby
+
+    - name: Save RUBY_VERSION
+      run: echo "${{ steps.monoruby.outputs.ruby-version }}" > monoruby/RUBY_VERSION
+
+    - name: Set MSPEC
+      run: echo "MSPEC=timeout 90 spec/mspec/bin/mspec ci --target monoruby --format yaml --output stats.yml" >> $GITHUB_ENV
+
+    - name: language specs
+      run: $MSPEC spec/ruby/language
+      continue-on-error: true
+    - run: mv stats.yml monoruby/language.yml
+
+    - name: core specs
+      run: $MSPEC spec/ruby/core
+      continue-on-error: true
+    - run: mv stats.yml monoruby/core.yml
+
+    - name: library specs
+      run: $MSPEC spec/ruby/library
+      continue-on-error: true
+    - run: mv stats.yml monoruby/library.yml
+
+    - name: security specs
+      run: $MSPEC spec/ruby/security
+      continue-on-error: true
+    - run: mv stats.yml monoruby/security.yml
+
+    - name: command_line specs
+      run: $MSPEC spec/ruby/command_line
+      continue-on-error: true
+    - run: mv stats.yml monoruby/command_line.yml
+
+    # Text-strip the `exceptions:` block — monoruby's YAML output occasionally
+    # emits escape sequences that CRuby's Psych can't parse. Also keeps the
+    # committed yml files small (drops tens of KB of failure text).
+    - name: Strip yaml exceptions
+      run: |
+        for f in monoruby/*.yml; do
+          ruby -e '
+            p = ARGV[0]
+            src = File.read(p)
+            if src.strip.empty?
+              File.write(p, "--- {}\n"); exit
+            end
+            out, in_exc = [], false
+            src.each_line do |line|
+              if !in_exc && line.start_with?("exceptions:")
+                in_exc = true; out << "exceptions:\n"; next
+              end
+              in_exc = false if in_exc && line =~ /\A[a-zA-Z_]+:/
+              out << line unless in_exc
+            end
+            File.write(p, out.join)
+          ' "$f"
+        done
+
+    - run: rm -rf monoruby
+      working-directory: rubyspec-stats
+    - run: cp -R ../monoruby .
+      working-directory: rubyspec-stats
+    - name: Commit and push
+      working-directory: rubyspec-stats
+      run: |
+        git config user.name "github-actions[bot]"
+        git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git add monoruby
+        if git diff --cached --quiet; then
+          echo "no changes to commit"
+          exit 0
+        fi
+        git commit -m "Update monoruby spec results"
+        git pull --rebase
+        git push
+
   html:
-    needs: [specs] # comment this out to only deploy
+    needs: [specs, monoruby] # comment this out to only deploy
+    if: ${{ always() && needs.specs.result == 'success' }}
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v6
@@ -119,7 +227,7 @@ jobs:
         ruby-version: 3.2
 
     - run: mkdir site
-    - run: ruby analyze_per_file.rb --html ruby/*.yml truffleruby/*.yml jruby/*.yml > site/index.html
+    - run: ruby analyze_per_file.rb --html ruby/*.yml truffleruby/*.yml jruby/*.yml monoruby/*.yml > site/index.html
 
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v5
