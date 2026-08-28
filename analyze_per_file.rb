@@ -12,7 +12,8 @@ processed = {}
 ARGV.each { |results_file|
   results_file =~ /^(\w+)\/(.+)\.yml$/ or raise results_file
   ruby, group = $1, $2
-  data = YAML.load_file(results_file, symbolize_names: true)
+  data = YAML.load_file(results_file, symbolize_names: true) || {}
+  KINDS.each { |kind| data[kind] ||= 0 }
   processed[ruby] ||= {}
   processed[ruby][group] = data
 }
@@ -142,6 +143,8 @@ if HTML
       ruby_version_file = "#{ruby}/RUBY_VERSION"
       major_minor = File.read(ruby_version_file)[/^\d+\.\d+/]
       ruby_name = "CRuby #{major_minor}"
+    elsif ruby == 'monoruby'
+      ruby_name = 'monoruby dev'
     else
       ruby_name = "#{ruby_name} dev"
     end
