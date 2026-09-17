@@ -1,9 +1,10 @@
 ---
 exceptions:
-time: 72.45005400000001
+- "Binding#irb creates an IRB session with the binding in scope FAILED\nExpected [] == [\"a ** 2\", \"100\", \"exit\"]\nto be truthy but was false\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/library/irb/irb_spec.rb:17:in 'block in <main>'\norg/jruby/RubyBasicObject.java:2783:in 'instance_exec'\norg/jruby/RubyArrayNative.java:4226:in 'all?'\norg/jruby/RubyArrayNative.java:1729:in 'each'\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/library/irb/irb_spec.rb:4:in '<main>'\norg/jruby/RubyKernel.java:1403:in 'load'\norg/jruby/RubyBasicObject.java:2783:in 'instance_exec'\norg/jruby/RubyArrayNative.java:1729:in 'each'"
+time: 73.09439599999999
 files: 1516
 examples: 6489
-expectations: 21724
-failures: 0
+expectations: 21726
+failures: 1
 errors: 0
 tagged: 815
