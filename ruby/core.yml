@@ -8,10 +8,10 @@ exceptions:
 - "Array#rindex starts searching at a negative offset relative to the end ERROR\nArgumentError: wrong number of arguments (given 2, expected 0..1)\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/core/array/rindex_spec.rb:41:in 'Array#rindex'\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/core/array/rindex_spec.rb:41:in 'block (2 levels) in <top (required)>'\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/core/array/rindex_spec.rb:9:in '<top (required)>'"
 - "Array#rindex returns nil when the offset is outside the array ERROR\nArgumentError: wrong number of arguments (given 2, expected 0..1)\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/core/array/rindex_spec.rb:47:in 'Array#rindex'\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/core/array/rindex_spec.rb:47:in 'block (2 levels) in <top (required)>'\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/core/array/rindex_spec.rb:9:in '<top (required)>'"
 - "Array#rindex ignores the block if there is an argument and an offset ERROR\nArgumentError: wrong number of arguments (given 2, expected 0..1)\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/core/array/rindex_spec.rb:81:in 'Array#rindex'\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/core/array/rindex_spec.rb:81:in 'block (3 levels) in <top (required)>'\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/core/array/rindex_spec.rb:82:in 'block (2 levels) in <top (required)>'\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/core/array/rindex_spec.rb:9:in '<top (required)>'"
-time: 26.046164061
+time: 27.294807377
 files: 2157
 examples: 23281
-expectations: 152607
+expectations: 148845
 failures: 0
 errors: 8
 tagged: 0
