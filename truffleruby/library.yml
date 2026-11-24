@@ -1,10 +1,10 @@
 ---
 exceptions:
-- "PTY.spawn makes the pty the stdin, stdout and stderr of the command FAILED\nExpected \"\" == \n\"/dev/pts/0\\r\n\"\nto be truthy but was false\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/library/pty/spawn_spec.rb:64:in 'block (3 levels) in <top (required)>'\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/library/pty/spawn_spec.rb:6:in 'block in <top (required)>'\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/library/pty/spawn_spec.rb:3:in '<top (required)>'"
-time: 34.716257886
+- "PTY.spawn makes the pty the stdin, stdout and stderr of the command FAILED\nExpected \"\" == \n\"/dev/pts/0\\r\n\"\nto be truthy but was false\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/library/pty/spawn_spec.rb:65:in 'block (3 levels) in <top (required)>'\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/library/pty/spawn_spec.rb:7:in 'block in <top (required)>'\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/library/pty/spawn_spec.rb:4:in '<top (required)>'"
+time: 34.85972246
 files: 1530
-examples: 6671
-expectations: 22821
+examples: 6676
+expectations: 22827
 failures: 1
 errors: 0
 tagged: 223
