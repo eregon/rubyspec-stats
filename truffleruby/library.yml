@@ -1,7 +1,7 @@
 ---
 exceptions:
 - "PTY.spawn makes the pty the stdin, stdout and stderr of the command FAILED\nExpected \"\" == \n\"/dev/pts/0\\r\n\"\nto be truthy but was false\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/library/pty/spawn_spec.rb:65:in 'block (3 levels) in <top (required)>'\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/library/pty/spawn_spec.rb:7:in 'block in <top (required)>'\n/home/runner/work/rubyspec-stats/rubyspec-stats/spec/ruby/library/pty/spawn_spec.rb:4:in '<top (required)>'"
-time: 33.988992979
+time: 34.558085929
 files: 1530
 examples: 6677
 expectations: 22829
